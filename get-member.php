@@ -6,7 +6,8 @@ $ldapport = 389;
 
 $username = "admininno";
 $password = "1234";
-$domain = "BEMIS";
+$domain = "EXAMPLE";
+$dc = "COM";
 
 $ldap = ldap_connect($adServer, $ldapport)  or die("Could not connect to $ldaphost");
 
@@ -17,7 +18,7 @@ $bind = @ldap_bind($ldap, $ldaprdn, $password);
 
 if ($bind) {
     $filter = "(sAMAccountName=$username)";
-    $result = ldap_search($ldap, "dc={$domain},dc=COM", $filter);
+    $result = ldap_search($ldap, "dc={$domain},dc={$dc}", $filter);
     // ldap_sort($ldap, $result, "sn");
     $info = ldap_get_entries($ldap, $result);
 
