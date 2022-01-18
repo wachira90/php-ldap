@@ -24,8 +24,9 @@ if ($bind) {
 
     echo "<pre>";
     // print_r($info);
-    print_r($info[0]['memberof']);
+    print_r($info[0]);
     // print_r($info[0]['memberof'][2]);
+    // print_r($info[0]['flags'][0]);
 
     @ldap_close($ldap);
 } else {
