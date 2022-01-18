@@ -10,6 +10,22 @@ php ldap connect and authen active directory
 ````
 php -S 0.0.0.0:7000
 ````
+## URL 
+````
+http://localhost:7000/get-member.php
+````
+
+## Results
+````
+Array
+(
+    [count] => 4
+    [0] => CN=Domain Admins,CN=Users,DC=example,DC=com
+    [1] => CN=Network Configuration Operators,CN=Builtin,DC=example,DC=com
+    [2] => CN=Remote Desktop Users,CN=Builtin,DC=example,DC=com
+    [3] => CN=Administrators,CN=Builtin,DC=example,DC=com
+)
+````
 
 ## Test on php 7.3.28
 
